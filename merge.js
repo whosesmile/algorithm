@@ -19,3 +19,10 @@ function merge(l, r) {
 }
 
 module.exports = sort;
+
+// 测试
+if (module === require.main) {
+  var list = new Array(20).fill(0).map(n => Math.floor(Math.random() * 100));
+  list = sort(list);
+  console.log(list);
+}

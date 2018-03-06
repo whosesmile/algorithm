@@ -15,9 +15,7 @@ function sort(list = [], s = 0, e = list.length - 1) {
       ++i;
     }
 
-    if (i < j) {
-      [list[i], list[j]] = [list[j], list[i]];
-    }
+    [list[i], list[j]] = [list[j], list[i]];
   }
 
   [list[i], list[s]] = [list[s], list[i]];
@@ -27,3 +25,10 @@ function sort(list = [], s = 0, e = list.length - 1) {
 }
 
 module.exports = sort;
+
+// 测试
+if (module === require.main) {
+  var list = new Array(20).fill(0).map(n => Math.floor(Math.random() * 100));
+  sort(list);
+  console.log(list);
+}
