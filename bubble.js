@@ -1,8 +1,9 @@
+// 冒泡排序 稳定
 function sort(list) {
-  for (let i = 0; i < list.length; i++) {
-    for (let j = i + 1; j < list.length; j++) {
-      if (list[i] > list[j]) {
-        [list[i], list[j]] = [list[j], list[i]];
+  for (let i = 0; i < list.length - 1; i++) {
+    for (let j = 0; j < list.length - 1 - i; j++) {
+      if (list[j] > list[j + 1]) {
+        [list[j], list[j + 1]] = [list[j + 1], list[j]];
       }
     }
   }

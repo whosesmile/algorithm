@@ -1,16 +1,17 @@
+// 快速排序 不稳定
 function sort(list = [], s = 0, e = list.length - 1) {
   if (s >= e) {
     return;
   }
 
-  const b = list[s];
+  const p = list[s];
   let [i, j] = [s, e];
 
   while (i < j) {
-    while (list[j] >= b && i < j) {
+    while (list[j] >= p && i < j) {
       --j;
     }
-    while (list[i] <= b && i < j) {
+    while (list[i] <= p && i < j) {
       ++i;
     }
 

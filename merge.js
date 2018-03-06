@@ -1,3 +1,4 @@
+// 归并排序
 function sort(list = []) {
   if (list.length <= 1) {
     return list;
@@ -14,7 +15,7 @@ function merge(l, r) {
   while (l.length && r.length) {
     list.push(l[0] < r[0] ? l.shift() : r.shift());
   }
-  return list.concat(l).concat(r); //[...list, ...l, ...r];
+  return list.concat(l).concat(r);
 }
 
 module.exports = sort;
